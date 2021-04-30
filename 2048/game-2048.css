@@ -1,0 +1,78 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: larger;
+  font: "Clear Sans", "Helvetica Neue", "Arial", "sans-serif";
+  background-color: #faf8ef;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+
+/* .game-name {
+  text-align: center;
+  height: 3.4rem;
+  width: 5rem;
+  border-radius: 8%;
+  
+} */
+
+ul#list_info {
+  min-width: auto;
+  list-style: none;
+}
+#list_info li {
+  margin: 10px;
+  float: left;
+}
+.score-container {
+  text-align: center;
+  height: 3.4rem;
+  width: 5rem;
+  border-radius: 8%;
+  background-color: #78c5f1;
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  background-color: #219dce;
+}
+
+.grid {
+  width: 100%;
+  position: relative;
+}
+
+.cell {
+  width: 90px;
+  height: 90px;
+  margin: 8px 8px 0 0;
+  background-color: #cdf0f1;
+  float: left;
+}
+
+.cell:nth-child(4n + 1) {
+  margin-left: 8px;
+}
+
+.number {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 82px;
+  background-color: whitesmoke;
+  color: #afa192;
+  transition: all 0.4s;
+}
+
+.new-game {
+  cursor: pointer;
+}
