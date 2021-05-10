@@ -11,7 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
 </head>
 
-<body>
+<body onload="checkLoginStatus()">
     <div class="header">
         <div class = "head">
             <h2><span id="moveLeft">ARCADES</span> <span id="moveRight">ASSEMBLE</span></h2>
@@ -22,7 +22,7 @@
             <li><a href="/games/classic-snake/" class="classic-snake-game">Classic Snake</a></li>
             <li><a href="#" class="active tetris">Tetris</a></li>
             <li><a href="/games/guess-the-color/" class="guess-the-color">Guess the Color!</a></li>
-            <li><a href="#">Logout</a></li>
+            <li onclick="logout()"><a href="/login" id="login-btn">Logout</a></li>
             <li><a href="/games">Return</a></li>
         </ul>
     </div>
@@ -55,13 +55,28 @@
                     <div class="level-value blocks" id="level">0</div>
                 </div>
                 <div class="button-set">
-                    <button class="buttons-game" id="startgame" onclick="newGame()">Start New Game</button>
+                    <button class="buttons-game" id="startgame" onclick="newGame()">Start Game</button>
                     <br>
                     <button class="buttons-game" id="Pause" onclick="togglePause()"><span id="toggle-pause-content">Pause</span></button>
                     <button class="buttons-game" id="End">Options</button>
                 </div>
             </div>
         </div>
+        <div class="tetris-game-over">
+            <span id="game-over-tetris"></span>
+        </div>
+    </div>
+
+    <div class="leaderboard_pop"><div class="img_wrap"><div class="hide">Leaderboard!</div><img src="/resources/leaderboard/images/trophy.png" width=100% height=100% align="center" ></div></div>
+    <!-- /////Leaderboard pop-up///// -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p align="center" font-weight="bold">Leaderboard text</p>
+    </div>
+
     </div>
     <script src="/scripts/tetris/tetris.js"></script>
 
